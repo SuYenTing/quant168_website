@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on 台股投資選股研究室 部落格</title>
+    <link>/categories/</link>
+    <description>Recent content in Categories on 台股投資選股研究室 部落格</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>策略研究所</title>
+      <link>/categories/%E7%AD%96%E7%95%A5%E7%A0%94%E7%A9%B6%E6%89%80/</link>
+      <pubDate>Tue, 12 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/%E7%AD%96%E7%95%A5%E7%A0%94%E7%A9%B6%E6%89%80/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>量化程式小家教</title>
+      <link>/categories/%E9%87%8F%E5%8C%96%E7%A8%8B%E5%BC%8F%E5%B0%8F%E5%AE%B6%E6%95%99/</link>
+      <pubDate>Mon, 04 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/%E9%87%8F%E5%8C%96%E7%A8%8B%E5%BC%8F%E5%B0%8F%E5%AE%B6%E6%95%99/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

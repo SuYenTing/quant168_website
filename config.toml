@@ -1,0 +1,56 @@
+theme = "story"
+# Site settings
+baseurl = "/"
+title = "台股投資選股研究室 部落格"
+paginate = 5
+buildFuture = true
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "\\.RData$", "_files$", "_cache$"]
+
+#[[menu.social]]
+#  name = "GitHub"
+#  title = "fab fa-github-square"
+#  url = "https://github.com/xaprb/story/"
+
+# [[menu.main]]
+#  name = "Talks"
+#  title = "Talks"
+#  url = "/talks/"
+
+# [[menu.main]]
+#  name = "Slides"
+#  title = "Slides"
+#  url = "/slides/"
+
+[[menu.main]]
+  name = "所有文章"
+  title = "所有文章"
+  url = "/archives/"
+
+[[menu.main]]
+  name = "策略研究所"
+  title = "策略研究所"
+  url = "/post_strategy/"
+  
+[[menu.main]]
+  name = "量化程式小家教"
+  title = "量化程式小家教"
+  url = "/post_learn/"
+  
+[[menu.main]]
+  name = "免責聲明"
+  title = "免責聲明"
+  url = "/statement/"
+
+[params]
+  author = "  Quant168 智能投資研究團隊"
+  twitter = "  Quant168 智能投資研究團隊"
+  classes = []
+
+[outputs]
+  home = ["HTML", "JSON", "RSS"]
+  page = ["HTML"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  taxonomyTerm = ["HTML", "RSS"]
+
+
