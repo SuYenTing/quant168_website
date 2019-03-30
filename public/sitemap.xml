@@ -3,18 +3,23 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/post_learn/20190330_r_parallel_introduction/</loc>
+    <lastmod>2019-03-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post_strategy/20190312_dominate_efficient_frontier_strategy/</loc>
     <lastmod>2019-03-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/post_learn/20190218_differences_between_machine_learning_and_statistical_models/</loc>
-    <lastmod>2019-02-18T00:00:00+00:00</lastmod>
+    <lastmod>2019-02-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/post_learn/20190211_what_problems_can_machine_learning_solve/</loc>
-    <lastmod>2019-02-11T00:00:00+00:00</lastmod>
+    <lastmod>2019-02-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -28,7 +33,7 @@
   </url>
   
   <url>
-    <loc>/authors/elvis-presley/</loc>
+    <loc>/authors/yenting/</loc>
   </url>
   
   <url>
@@ -56,7 +61,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-03-12T00:00:00+00:00</lastmod>
+    <lastmod>2019-03-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -80,13 +85,13 @@
   
   <url>
     <loc>/categories/%E9%87%8F%E5%8C%96%E7%A8%8B%E5%BC%8F%E5%B0%8F%E5%AE%B6%E6%95%99/</loc>
-    <lastmod>2019-02-18T00:00:00+00:00</lastmod>
+    <lastmod>2019-03-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/post_learn/</loc>
-    <lastmod>2019-02-18T00:00:00+00:00</lastmod>
+    <lastmod>2019-03-30T00:00:00+00:00</lastmod>
   </url>
   
 </urlset>

@@ -77,6 +77,33 @@
           <div class="db pv4 ph3 ph0-l no-underline dark-gray">
               <div class="flex flex-column flex-row-ns">
                   
+                  <div class="mb4 mb0-ns w-100 h4 h4-m w4-m h5-ns w5-ns br3 cover hide-child" style="background-image: url('/img/unsplash-photos-4zxSWESyZio.tn-500x500.jpg'); background-position: center;">
+                      <a href="/post_learn/20190330_r_parallel_introduction/" class="sans-serif db child w-100 h-100 f7 lh-copy white no-underline br3 ph3 pt4 pt5-l ttu tc bg-black-60">
+                          <i class="mt3 mt5-l child far fa-calendar-alt"></i> Mar 30, 2019
+                      </a>
+                  </div>
+                  
+                  <div class="w-100 w6-ns pl3-ns">
+                      <h1 class="f3 fw1 mt0 lh-title"><a href="/post_learn/20190330_r_parallel_introduction/" class="color-inherit dim link">R語言平行運算介紹</a></h1>
+                      <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+                              在做量化投資策略參數最佳化時，都會透過for迴圈的寫法來處理，但是如果策略很複雜時，每次迴圈跑得速度都會很慢。由於R程式是用單個執行緒在跑，因此要克服執行時間很久的問題，最簡單的方法就是在電腦上開很多個R程式一起跑。這樣就會用很多個執行緒在計算，此方法類似平行運算的概念，但這樣做實在是很麻煩。為解決這個問題，R程式裡面有一個套件parallel，只要將要程式碼包裝成函數形式，就可以跑平行運算。&lt;br&gt;前言在做量化投資策略參數最佳化時，都會透過for迴圈的寫法來處理，但是如果策略很複雜時，每次迴圈跑得速度都會很慢。由於R程式是用單個執行緒在跑，因此要克服執行時間很久的問題，最簡單的方法就是在電腦上開很多個R程式一起跑。這樣就會用很多個執行緒在計算，此方法類似平行運算的概念，但這樣做實在是很麻煩。為解決這個問題，R程式裡面有一個套件parallel，只要將要程式碼包裝成函數形式，就可以跑平行運算。
+接下來文章一開始會先用for迴圈做一個簡單的範例，再來會使用apply家族提升速度，最後用平行運算讓速度再往上提升。透過這個範例，可以看到如何使用平行運算及平行運算的速度。
+使用套件library(parallel) # 平行運算套件library(tidyverse) # 資料科學專用套件包For迴圈寫法我們做一個簡單的範例，產生1,000列的資料，每列為共包含兩個數，分別為該列的值及平方值。
+output &amp;lt;- NULL # 建立儲存表power &amp;lt;- 2 # 次方數ptm &amp;lt;- proc.time() # 啟動計時器for(ix in 1:1000){rowData &amp;lt;- tibble(num1 = ix, num2 = ix^power) output &amp;lt;- output %&amp;gt;% bind_rows(rowData)}forTime &amp;lt;- proc.time() - ptm # 結束計時器 執行完後，output會是：
+output## # A tibble: 1,000 x 2## num1 num2## &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt;## 1 1 1## 2 2 4## 3 3 9## 4 4 16## 5 5 25## 6 6 36## 7 7 49## 8 8 64## 9 9 81## 10 10 100## # .
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </article>
+  </div>
+  
+  
+  <div class="relative w-100">
+      <article>
+          <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+              <div class="flex flex-column flex-row-ns">
+                  
                   <div class="mb4 mb0-ns w-100 h4 h4-m w4-m h5-ns w5-ns br3 cover hide-child" style="background-image: url('/img/unsplash-photos-5mZ_M06Fc9g.tn-500x500.jpg'); background-position: center;">
                       <a href="/post_strategy/20190312_dominate_efficient_frontier_strategy/" class="sans-serif db child w-100 h-100 f7 lh-copy white no-underline br3 ph3 pt4 pt5-l ttu tc bg-black-60">
                           <i class="mt3 mt5-l child far fa-calendar-alt"></i> Mar 12, 2019
@@ -106,12 +133,12 @@
                   
                   <div class="mb4 mb0-ns w-100 h4 h4-m w4-m h5-ns w5-ns br3 cover hide-child" style="background-image: url('/img/unsplash-photos-TzMi5Ov7QeM.tn-500x500.jpg'); background-position: center;">
                       <a href="/post_learn/20190218_differences_between_machine_learning_and_statistical_models/" class="sans-serif db child w-100 h-100 f7 lh-copy white no-underline br3 ph3 pt4 pt5-l ttu tc bg-black-60">
-                          <i class="mt3 mt5-l child far fa-calendar-alt"></i> Feb 18, 2019
+                          <i class="mt3 mt5-l child far fa-calendar-alt"></i> Feb 25, 2019
                       </a>
                   </div>
                   
                   <div class="w-100 w6-ns pl3-ns">
-                      <h1 class="f3 fw1 mt0 lh-title"><a href="/post_learn/20190218_differences_between_machine_learning_and_statistical_models/" class="color-inherit dim link">機器學習簡介─機器學習能夠解決哪些問題？</a></h1>
+                      <h1 class="f3 fw1 mt0 lh-title"><a href="/post_learn/20190218_differences_between_machine_learning_and_statistical_models/" class="color-inherit dim link">機器學習與統計模型之差異</a></h1>
                       <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
                               在接觸到機器學習的領域時，許多人一定有個疑問：機器學習是不是就等同於統計模型？在回答這個問題之前，我們應該都能理解一點，當處理的問題是與數據息息相關，無論使用何種工具來分析，最後的目標都是從數據當中挖掘潛在的知識與訊息。故對於機器學習與統計模型來說，都是藉由資料分析，獲得背後隱藏的訊息。回歸到機器學習與統計模型的差異，先從其定義說起。&lt;br&gt;統計模型定義統計模型係為「以數據為基礎，使用數學方程式的形式表現變量之間的關係。」
 機器學習與統計模型之相異之處在接觸到機器學習的領域時，許多人一定有個疑問：機器學習是不是就等同於統計模型？在回答這個問題之前，我們應該都能理解一點，當處理的問題是與數據息息相關，無論使用何種工具來分析，最後的目標都是從數據當中挖掘潛在的知識與訊息。故對於機器學習與統計模型來說，都是藉由資料分析，獲得背後隱藏的訊息。回歸到機器學習與統計模型的差異，先從其定義說起：
@@ -153,7 +180,7 @@
                   
                   <div class="mb4 mb0-ns w-100 h4 h4-m w4-m h5-ns w5-ns br3 cover hide-child" style="background-image: url('/img/unsplash-photos-nehfi_SfqtU.tn-500x500.jpg'); background-position: center;">
                       <a href="/post_learn/20190211_what_problems_can_machine_learning_solve/" class="sans-serif db child w-100 h-100 f7 lh-copy white no-underline br3 ph3 pt4 pt5-l ttu tc bg-black-60">
-                          <i class="mt3 mt5-l child far fa-calendar-alt"></i> Feb 11, 2019
+                          <i class="mt3 mt5-l child far fa-calendar-alt"></i> Feb 18, 2019
                       </a>
                   </div>
                   

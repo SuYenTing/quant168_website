@@ -10,6 +10,63 @@
 		<updated>0001-01-01 00:00:00 &#43;0000 UTC</updated>
 		
 		<item>
+			<title>R語言平行運算介紹</title>
+			<link>/post_learn/20190330_r_parallel_introduction/</link>
+			<pubDate>Sat, 30 Mar 2019 00:00:00 UTC</pubDate>
+			<author>Quant168 智能投資研究團隊</author>
+			<guid>/post_learn/20190330_r_parallel_introduction/</guid>
+			<media:content xmlns:media="http://search.yahoo.com/mrss/" url="/img/unsplash-photos-4zxSWESyZio.tn-500x500.jpg" medium="image" type="image/jpg" width="100" height="100" />
+			<description>&lt;p&gt;在做量化投資策略參數最佳化時，都會透過for迴圈的寫法來處理，但是如果策略很複雜時，每次迴圈跑得速度都會很慢。由於R程式是用單個執行緒在跑，因此要克服執行時間很久的問題，最簡單的方法就是在電腦上開很多個R程式一起跑。這樣就會用很多個執行緒在計算，此方法類似平行運算的概念，但這樣做實在是很麻煩。為解決這個問題，R程式裡面有一個套件parallel，只要將要程式碼包裝成函數形式，就可以跑平行運算。&lt;br&gt;前言
+在做量化投資策略參數最佳化時，都會透過for迴圈的寫法來處理，但是如果策略很複雜時，每次迴圈跑得速度都會很慢。由於R程式是用單個執行緒在跑，因此要克服執行時間很久的問題，最簡單的方法就是在電腦上開很多個R程式一起跑。這樣就會用很多個執行緒在計算，此方法類似平行運算的概念，但這樣做實在是很麻煩。為解決這個問題，R程式裡面有一個套件parallel，只要將要程式碼包裝成函數形式，就可以跑平行運算。
+接下來文章一開始會先用for迴圈做一個簡單的範例，再來會使用apply家族提升速度，最後用平行運算讓速度再往上提升。透過這個範例，可以看到如何使用平行運算及平行運算的速度。&lt;/p&gt;
+
+&lt;p&gt;使用套件
+library(parallel) # 平行運算套件
+library(tidyverse) # 資料科學專用套件包&lt;/p&gt;
+
+&lt;p&gt;For迴圈寫法
+我們做一個簡單的範例，產生1,000列的資料，每列為共包含兩個數，分別為該列的值及平方值。
+output &amp;lt;- NULL # 建立儲存表
+power &amp;lt;- 2 # 次方數
+ptm &amp;lt;- proc.time() # 啟動計時器
+for(ix in 1:1000){
+rowData &amp;lt;- tibble(num1 = ix, num2 = ix^power) output &amp;lt;- output %&amp;gt;% bind_rows(rowData)
+}
+forTime &amp;lt;- proc.time() - ptm # 結束計時器
+執行完後，output會是：
+output&lt;/p&gt;
+
+&lt;h2 id=&#34;a-tibble-1-000-x-2&#34;&gt;# A tibble: 1,000 x 2&lt;/h2&gt;
+
+&lt;h2 id=&#34;num1-num2&#34;&gt;num1 num2&lt;/h2&gt;
+
+&lt;h2 id=&#34;lt-int-gt-lt-dbl-gt&#34;&gt;&amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;1-1-1&#34;&gt;1 1 1&lt;/h2&gt;
+
+&lt;h2 id=&#34;2-2-4&#34;&gt;2 2 4&lt;/h2&gt;
+
+&lt;h2 id=&#34;3-3-9&#34;&gt;3 3 9&lt;/h2&gt;
+
+&lt;h2 id=&#34;4-4-16&#34;&gt;4 4 16&lt;/h2&gt;
+
+&lt;h2 id=&#34;5-5-25&#34;&gt;5 5 25&lt;/h2&gt;
+
+&lt;h2 id=&#34;6-6-36&#34;&gt;6 6 36&lt;/h2&gt;
+
+&lt;h2 id=&#34;7-7-49&#34;&gt;7 7 49&lt;/h2&gt;
+
+&lt;h2 id=&#34;8-8-64&#34;&gt;8 8 64&lt;/h2&gt;
+
+&lt;h2 id=&#34;9-9-81&#34;&gt;9 9 81&lt;/h2&gt;
+
+&lt;h2 id=&#34;10-10-100&#34;&gt;10 10 100&lt;/h2&gt;
+
+&lt;h2&gt;# .&lt;/h2&gt;
+</description>
+		</item>
+		
+		<item>
 			<title>運用效率前緣選出優勢股票(一)</title>
 			<link>/post_strategy/20190312_dominate_efficient_frontier_strategy/</link>
 			<pubDate>Tue, 12 Mar 2019 00:00:00 UTC</pubDate>
@@ -72,9 +129,9 @@
 		</item>
 		
 		<item>
-			<title>機器學習簡介─機器學習能夠解決哪些問題？</title>
+			<title>機器學習與統計模型之差異</title>
 			<link>/post_learn/20190218_differences_between_machine_learning_and_statistical_models/</link>
-			<pubDate>Mon, 18 Feb 2019 00:00:00 UTC</pubDate>
+			<pubDate>Mon, 25 Feb 2019 00:00:00 UTC</pubDate>
 			<author>Quant168 智能投資研究團隊</author>
 			<guid>/post_learn/20190218_differences_between_machine_learning_and_statistical_models/</guid>
 			<media:content xmlns:media="http://search.yahoo.com/mrss/" url="/img/unsplash-photos-TzMi5Ov7QeM.tn-500x500.jpg" medium="image" type="image/jpg" width="100" height="100" />
@@ -140,7 +197,7 @@
 		<item>
 			<title>機器學習簡介─機器學習能夠解決哪些問題？</title>
 			<link>/post_learn/20190211_what_problems_can_machine_learning_solve/</link>
-			<pubDate>Mon, 11 Feb 2019 00:00:00 UTC</pubDate>
+			<pubDate>Mon, 18 Feb 2019 00:00:00 UTC</pubDate>
 			<author>Quant168 智能投資研究團隊</author>
 			<guid>/post_learn/20190211_what_problems_can_machine_learning_solve/</guid>
 			<media:content xmlns:media="http://search.yahoo.com/mrss/" url="/img/unsplash-photos-nehfi_SfqtU.tn-500x500.jpg" medium="image" type="image/jpg" width="100" height="100" />
