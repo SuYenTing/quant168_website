@@ -4,7 +4,11 @@ baseurl = "/"
 title = "台股投資選股研究室 部落格"
 paginate = 5
 buildFuture = true
+
+# 不納入Public檔案
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "\\.RData$", "_files$", "_cache$"]
+
+# 留言區帳號
 disqusShortname = "https-quant168-netlify-com"
 
 #[[menu.social]]
