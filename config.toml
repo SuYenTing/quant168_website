@@ -5,7 +5,7 @@ title = "台股投資選股研究室 部落格"
 paginate = 5
 buildFuture = true
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "\\.RData$", "_files$", "_cache$"]
-disqusShortname = "SuYenTing"
+disqusShortname = "nsysuquant"
 
 #[[menu.social]]
 #  name = "GitHub"
