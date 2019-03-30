@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<title>台股投資選股研究室 部落格</title>
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="/index.xml">
+		<link rel="canonical" href="/post_learn/20190218_differences_between_machine_learning_and_statistical_models/">
+		
+		
+		<link rel="shortcut icon" type="image/png" href="/img/web_logo.jpg">
+		<meta name="description" content="在接觸到機器學習的領域時，許多人一定有個疑問：機器學習是不是就等同於統計模型？在回答這個問題之前，我們應該都能理解一點，當處理的問題是與數據息息相關，無論使用何種工具來分析，最後的目標都是從數據當中挖掘潛在的知識與訊息。故對於機器學習與統計模型來說，都是藉由資料分析，獲得背後隱藏的訊息。回歸到機器學習與統計模型的差異，先從其定義說起。">
+		
+		<meta name="generator" content="Hugo 0.54.0" />
+
+		
+		<meta property="og:title" content="機器學習簡介─機器學習能夠解決哪些問題？" />
+		<meta property="og:type" content="article" />
+		<meta property="og:image" content="/img/unsplash-photos-TzMi5Ov7QeM.jpg" />
+		<meta property="og:description" content="在接觸到機器學習的領域時，許多人一定有個疑問：機器學習是不是就等同於統計模型？在回答這個問題之前，我們應該都能理解一點，當處理的問題是與數據息息相關，無論使用何種工具來分析，最後的目標都是從數據當中挖掘潛在的知識與訊息。故對於機器學習與統計模型來說，都是藉由資料分析，獲得背後隱藏的訊息。回歸到機器學習與統計模型的差異，先從其定義說起。" />
+		<meta property="og:url" content="/post_learn/20190218_differences_between_machine_learning_and_statistical_models/" />
+		<meta property="og:site_name" content="機器學習簡介─機器學習能夠解決哪些問題？" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@Quant168 智能投資研究團隊" />
+
+
+		
+		<link rel="stylesheet" href="/css/tachyons.min.css" />
+		<link rel="stylesheet" href="/css/story.css" />
+		<link rel="stylesheet" href="/css/descartes.css" />
+		
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400i,700,700i|Quattrocento:400,700|Spectral:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
+		
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		
+		<script src="/js/story.js"></script>
+
+	</head>
+	<body class="ma0 bg-white section-post_learn page-kind-page is-page-true ">
+		
+		<header class="cover bg-top" style="background-image: url('/img/unsplash-photos-TzMi5Ov7QeM.jpg'); background-position: center;">
+			<div class="bg-black-30 bb bt">
+
+				<nav class="hide-print sans-serif  border-box pa3 ph5-l">
+					<a href="/" title="Home">
+						<img src="/img/home_icon.jpg" class="w2 h2 br-100" alt="台股投資選股研究室 部落格" />
+					</a>
+					<div class="fr h2 pv2 tr">
+						<a class="link f5 ml2 dim near-white" href="/statement/">免責聲明</a>
+						<a class="link f5 ml2 dim near-white" href="/archives/">所有文章</a>
+						<a class="link f5 ml2 dim near-white" href="/post_strategy/">策略研究所</a>
+						<a class="link f5 ml2 dim near-white" href="/post_learn/">量化程式小家教</a>
+						<a class="link f5 ml2 dim near-white fas fa-rss-square" href="/index.xml" title="RSS Feed"></a>
+						<a class="link f5 ml2 dim near-white fas fa-search" href="/search/" role="search" title="Search"></a>
+					</div>
+				</nav>
+
+				<div id="hdr" class="tc-l pv4-ns pv5-l pv2 ph3 ph4-ns">
+					<h1 class="near-white mt1-ns f2 fw3 mb0 mt0 lh-title">機器學習簡介─機器學習能夠解決哪些問題？</h1>
+					<h2 class="near-white mt3-l mb4-l fw1 f6 f3-l measure-wide-l center lh-copy mt2 mb3">
+						
+						
+							
+								Published
+								<time datetime="2019-02-18T00:00:00Z">Feb 18, 2019</time>
+								<span class="display-print">by Quant168 智能投資研究團隊</span>
+								 in <a href="/categories/%E9%87%8F%E5%8C%96%E7%A8%8B%E5%BC%8F%E5%B0%8F%E5%AE%B6%E6%95%99" class="no-underline category near-white dim">量化程式小家教</a>
+								<span class="display-print">at /post_learn/20190218_differences_between_machine_learning_and_statistical_models/</span>
+							
+						
+					</h2>
+				</div>
+
+				
+				
+				
+				<div class="w-100 cf hide-print">
+					<a class="fr f6 ma0 pa2 link white-50 dim fas fa-camera" href="https://unsplash.com/photos/TzMi5Ov7QeM" title="Photo Credit"></a>
+				</div>
+				
+				
+
+			</div>
+		</header>
+		
+		<main role="main">
+		
+<article class="center bg-white br-3 pv1 ph4 lh-copy f5 nested-links mw7">
+	
+	
+	
+
+
+<div class="section level2">
+<h2>統計模型定義</h2>
+<blockquote>
+<p>統計模型係為「以數據為基礎，使用數學方程式的形式表現變量之間的關係。」</p>
+</blockquote>
+<hr />
+</div>
+<div class="section level2">
+<h2>機器學習與統計模型之相異之處</h2>
+<p>在接觸到機器學習的領域時，許多人一定有個疑問：機器學習是不是就等同於統計模型？在回答這個問題之前，我們應該都能理解一點，當處理的問題是與數據息息相關，無論使用何種工具來分析，最後的目標都是從數據當中挖掘潛在的知識與訊息。故對於機器學習與統計模型來說，都是藉由資料分析，獲得背後隱藏的訊息。回歸到機器學習與統計模型的差異，先從其定義說起：</p>
+<blockquote>
+<p>機器學習是「以一種不仰賴規則而設計的數據學習之演算法。」</p>
+<p>統計模型是「以數學方程式的模式，以表達變量之間的關係。」</p>
+</blockquote>
+<p>統計模型的發展，早於1749年開始，距今已270年歷史之久，當時，統計學被研究人員廣泛地運用在表達國際的經濟水準，以及作為軍事用途，爾後，統計學才逐漸被充分地使用在數據的分析。機器學習作為人工智慧(1940)的分支，自從1946年才開始起步，它的目標在於電腦可進行自我的學習來對目標取得解答。然而，對於統計學家而言，他們所關心的是模型所具有的「解釋能力」，也同時注重建構模型與解釋統計模型時所作的假設與嚴謹程度；反觀，機器學習學者則更關心模型的「預測能力」。舉個例子而言，對於明天會不會下雨的這件事，機器學習會表述說：「預測明天下雨的機率為60%」，但統計學家則會給予一個預測區間：「有95%的信心水準下，明天下雨的機率會落在50%到70%之間。」</p>
+<p>以下將從不同的層面，來說明機器學習與統計模型的不同之處：</p>
+<p><strong>1. 運作概念</strong></p>
+<ul>
+<li><p>機器學習：為資訊科學與人工智慧的一分支，透過數據學習以建構分析系統，並不仰賴明確的建構規則。</p></li>
+<li><p>統計模型：為數學的一分支。透過數據發現各變量之間的關係，給予一個預測的結果。</p></li>
+</ul>
+<p><strong>2. 歷史發展</strong></p>
+<ul>
+<li><p>機器學習：因計算能力以及資料蒐集的進步，加速了機器學習的發展。因數據規模以及複雜程度不斷攀升，故機器學習不斷展現出巨大的發展空間與潛力。</p></li>
+<li><p>統計模型：距今已有幾世紀之久，如同前段所言。</p></li>
+</ul>
+<p><strong>3. 模型假設</strong></p>
+<ul>
+<li><p>機器學習：擺脫過多假設的侷限。不需假設自變量或應變量的分布。</p></li>
+<li><p>統計模型：仰賴一系列的假設。舉例而言，對於迴歸模型，有觀測樣本獨立、同變異數、波動期望值為零等的假設</p></li>
+</ul>
+<p><strong>4. 數據處理能力</strong></p>
+<ul>
+<li><p>機器學習：可被廣泛地運用，並可學習大數據，並進行預測和持續學習。處理數據的深度與廣度極大。</p></li>
+<li><p>統計模型：一般應用在較小的數據量和較窄的數據屬性。</p></li>
+</ul>
+<p><strong>5. 預測方式與目標導向</strong></p>
+<ul>
+<li><p>機器學習：因機器學習不依賴假設，預測效果往往不錯。然而，其目標是建構一個高效並可靠的系統，持續穩定地預測未來的事件。例如：辨識圖像。</p></li>
+<li><p>統計模型：大多仰賴參數的估計，並傾向建構模型，瞭解變量之間所具有的關係。透過如此一來，模型可提供一個可信的預測區間。但因現實層面的複雜，往往不知道現實事件的輪廓與模樣，導致建構統計模型常備受挑戰，難以建構。</p></li>
+</ul>
+<p>總歸而言，統計學習的發展的確啟發了機器學習，而這幾年以來，機器學習會迅速的竄升也歸功於訓練數據量的能力大幅提升以及運算能力的可觀進步，故應可知道，統計理論並無本質上地突破，而是拜處理資料能力所賜。</p>
+<p>不過，統計學與機器學習仍然是高度相關的領域，若沒有彼此與其他領域的幫助與發展，它們仍然難以存在，也難以單獨生存。可預期的是，雖然機器學習和統計模型屬於不同分支，但經過長時間的發展後，兩者的差異有逐漸縮小的趨勢。</p>
+<hr />
+</div>
+<div class="section level2">
+<h2>參考資料</h2>
+<p><a href="https://kknews.cc/tech/gz22r3y.html">《機器學習vs統計模型》</a></p>
+</div>
+
+
+</article>
+
+		</main>
+		
+		
+		
+				<div class="hide-print sans-serif f6 f5-l mt5 ph3 pb6 center nested-copy-line-height lh-copy nested-links mw-100 measure-wide">
+		<div class="about-the-author">
+		
+			
+			
+				
+					<p><img src="/img/台股投資選股研究室形象圖案.jpg" alt="台股投資選股研究室形象圖案" /></p>
+
+<p><strong>台股投資選股研究室</strong></p>
+
+<p>一個提供台股最新市場訊息及量化策略投資建議的交流平台，透過量化投資指標的分析與討論，讓更多對台股有興趣的人可以理解量化策略的奧妙。</p>
+
+<!---
+[![Baron Schwartz](/img/baron-square.jpg)](https://www.xaprb.com)
+
+Baron Schwartz is the founder and CTO of [VividCortex](https://vividcortex.com), author of
+several books, and creator of various open-source software. He writes about topics
+such as technology, entrepreneurship, and fitness. [More about
+Baron](https://www.xaprb.com/).
+---->
+
+				
+			
+		
+		</div>
+		
+	</div>
+
+		
+		
+		
+		
+		  <div class="hide-print center bg-white br-3 pv1 ph4 lh-copy f5 nested-links mw7">
+		    
+          <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "nsysuquant" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        
+		  </div>
+		
+		
+		
+		
+		<footer class="hide-print sans-serif f6 fw1 bg-black near-white bottom-0 w-100 pa3" role="contentinfo">
+			
+			<p class="w-50 near-white">
+				&copy; 2019 Quant168 智能投資研究團隊
+			</p>
+		</footer>
+		
+	
+	
+	</body>
+</html>

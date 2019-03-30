@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<title>台股投資選股研究室 部落格</title>
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="/index.xml">
+		<link rel="canonical" href="/post_learn/20190211_what_problems_can_machine_learning_solve/">
+		
+		
+		<link rel="shortcut icon" type="image/png" href="/img/web_logo.jpg">
+		<meta name="description" content="在機器學習中，演算法通常隱含著電腦運作的邏輯與思路，故通常負責了資訊科學中最難解釋的部分。然而，機器學習能夠解決多少問題，則取決於演算法的發展，以下將介紹其發展領域，包含「監督式學習」、「非監督式學習」、以及「強化式學習」三個部分。">
+		
+		<meta name="generator" content="Hugo 0.54.0" />
+
+		
+		<meta property="og:title" content="機器學習簡介─機器學習能夠解決哪些問題？" />
+		<meta property="og:type" content="article" />
+		<meta property="og:image" content="/img/unsplash-photos-nehfi_SfqtU.jpg" />
+		<meta property="og:description" content="在機器學習中，演算法通常隱含著電腦運作的邏輯與思路，故通常負責了資訊科學中最難解釋的部分。然而，機器學習能夠解決多少問題，則取決於演算法的發展，以下將介紹其發展領域，包含「監督式學習」、「非監督式學習」、以及「強化式學習」三個部分。" />
+		<meta property="og:url" content="/post_learn/20190211_what_problems_can_machine_learning_solve/" />
+		<meta property="og:site_name" content="機器學習簡介─機器學習能夠解決哪些問題？" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@Quant168 智能投資研究團隊" />
+
+
+		
+		<link rel="stylesheet" href="/css/tachyons.min.css" />
+		<link rel="stylesheet" href="/css/story.css" />
+		<link rel="stylesheet" href="/css/descartes.css" />
+		
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400i,700,700i|Quattrocento:400,700|Spectral:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
+		
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		
+		<script src="/js/story.js"></script>
+
+	</head>
+	<body class="ma0 bg-white section-post_learn page-kind-page is-page-true ">
+		
+		<header class="cover bg-top" style="background-image: url('/img/unsplash-photos-nehfi_SfqtU.jpg'); background-position: center;">
+			<div class="bg-black-30 bb bt">
+
+				<nav class="hide-print sans-serif  border-box pa3 ph5-l">
+					<a href="/" title="Home">
+						<img src="/img/home_icon.jpg" class="w2 h2 br-100" alt="台股投資選股研究室 部落格" />
+					</a>
+					<div class="fr h2 pv2 tr">
+						<a class="link f5 ml2 dim near-white" href="/statement/">免責聲明</a>
+						<a class="link f5 ml2 dim near-white" href="/archives/">所有文章</a>
+						<a class="link f5 ml2 dim near-white" href="/post_strategy/">策略研究所</a>
+						<a class="link f5 ml2 dim near-white" href="/post_learn/">量化程式小家教</a>
+						<a class="link f5 ml2 dim near-white fas fa-rss-square" href="/index.xml" title="RSS Feed"></a>
+						<a class="link f5 ml2 dim near-white fas fa-search" href="/search/" role="search" title="Search"></a>
+					</div>
+				</nav>
+
+				<div id="hdr" class="tc-l pv4-ns pv5-l pv2 ph3 ph4-ns">
+					<h1 class="near-white mt1-ns f2 fw3 mb0 mt0 lh-title">機器學習簡介─機器學習能夠解決哪些問題？</h1>
+					<h2 class="near-white mt3-l mb4-l fw1 f6 f3-l measure-wide-l center lh-copy mt2 mb3">
+						
+						
+							
+								Published
+								<time datetime="2019-02-11T00:00:00Z">Feb 11, 2019</time>
+								<span class="display-print">by Quant168 智能投資研究團隊</span>
+								 in <a href="/categories/%E9%87%8F%E5%8C%96%E7%A8%8B%E5%BC%8F%E5%B0%8F%E5%AE%B6%E6%95%99" class="no-underline category near-white dim">量化程式小家教</a>
+								<span class="display-print">at /post_learn/20190211_what_problems_can_machine_learning_solve/</span>
+							
+						
+					</h2>
+				</div>
+
+				
+				
+				
+				<div class="w-100 cf hide-print">
+					<a class="fr f6 ma0 pa2 link white-50 dim fas fa-camera" href="https://unsplash.com/photos/nehfi_SfqtU" title="Photo Credit"></a>
+				</div>
+				
+				
+
+			</div>
+		</header>
+		
+		<main role="main">
+		
+<article class="center bg-white br-3 pv1 ph4 lh-copy f5 nested-links mw7">
+	
+	
+	
+
+
+<div class="section level2">
+<h2>機器學習定義</h2>
+<blockquote>
+<p>機器學習係為「能讓機器能夠自主學習並增強的演算法。其屬於人工智慧發展的一環。」</p>
+</blockquote>
+<hr />
+</div>
+<div class="section level2">
+<h2>機器學習之學習方式</h2>
+<p>在機器學習中，演算法通常隱含著電腦運作的邏輯與思路，故通常負責了資訊科學中最難解釋的部分。然而，機器學習能夠解決多少問題，則取決於演算法的發展，以下將介紹其發展領域，包含「監督式學習」、「非監督式學習」、以及「強化式學習」三個部分。</p>
+<hr />
+</div>
+<div class="section level2">
+<h2>監督式學習</h2>
+<p>監督式學習主要能處理的問題有：<strong>分類問題</strong>、<strong>偵測異狀</strong>、以及<strong>提供迴歸演算法</strong>。</p>
+<div class="section level3">
+<h3>分類問題</h3>
+<p>分類問題亦可分成「二元分類問題」及「多元分類問題」。</p>
+<p>二元分類，顧名思義，此種演算法是用於解決「只有兩種結果」的問題。例如：是或否、開或關、買或不買、抽菸或不抽菸等。很多資料科學中的問題都是屬於二元分類，或者能夠被轉換成二元分類的問題。以下為例子說明：</p>
+<ul>
+<li>這位顧客會不會續約？</li>
+<li>這張照片是不是一隻貓？</li>
+<li>每一件商品打八折或者第二件商品打五折，哪種促銷手法更能吸引顧客？</li>
+</ul>
+<p>而多元分類問題，則可利用此演算法解決多種回答的問題。以下為例子說明：</p>
+<ul>
+<li>這是何種動物的圖片？</li>
+<li>這篇新聞標題要如何下？</li>
+<li>這篇Facebook所包含的情緒為何？</li>
+</ul>
+</div>
+<div class="section level3">
+<h3>偵測異狀</h3>
+<p>對於不正常的資料，需要更謹慎的監測與辨別。或許這種方法相當類似二元分類法，因為感覺其原理皆是在判別有或沒有異狀。不過這兩者的區別是在於二元分類中的資料中包含兩種回答。但偵測異狀則不一定。當分析的情況發生率很低，導致樣本數很少的時候，異狀偵測就顯得相當有用。以下為例子說明：</p>
+<ul>
+<li>這張信用卡有被盜刷？</li>
+<li>這位使用者在這次消費和過去的消費行為落差很大嗎？</li>
+<li>這些用電量在這個季節和時間算是正常的嗎？</li>
+</ul>
+</div>
+<div class="section level3">
+<h3>提供迴歸演算法</h3>
+<p>當欲解決的問題涉及數字而非分類的時候可使用。一般而言，迴歸演算法會給予一個實數解，可以是很精密的小數實數解、也可能為負數解。若問題特定限制為「有幾個」的問題，則負數解可能被直接視為零，而分數解則會依四捨五入方法轉換成最接近的整數。以下為例子說明：</p>
+<ul>
+<li>下周二的氣溫如何？</li>
+<li>風力發電廠經過三十分鐘後，會有多少千瓦的需求？</li>
+<li>下周這位Twitter發言者會獲得多少新的追蹤者？</li>
+</ul>
+<p>有些問題看起來似乎是多元分類問題，但其實更適合用迴歸方式解決。例如：「讀者對於哪則新聞最感興趣？」乍看之下是個分類問題，但如果將問題轉換成「對於讀者而言，每則的新聞的有趣程度如何」並為每則新聞做評分，接下來只要選取分數最高的新聞即可。這類的問題通常和排名或對比有相關。相同道理，「我的車隊中，哪一輛最需要保養？」可以換成「這些車輛中，每台車需要保養的程度如何？」；「哪些顧客明年會跳槽到其他公司的產品」也可以轉換成「每名客戶隔年會跳槽到其他公司的產品的機率為何？」</p>
+<p>然而，二元分類問題是可以轉換成迴歸的問題。事實上，如果探究其原理，某些演算法的確會先將二元分類問題直接轉成迴歸的問題來解決。這種做法在二分法下不盡完美、或兩種都可能的情況下特別有用。舉例而言，當回答「有一部分是、而另一部分不是」或是「有可能開、也有可能關」的時候，迴歸演算法可以反映這些特性。這類問題通常會以「有多少可能性」或「有多少比例」的機率式問法開頭。以下為例子說明：</p>
+<ul>
+<li>這位使用者有多大機會會點進這則廣告？</li>
+<li>這名員工有多大機會造成公司內部安全的風險？</li>
+<li>今天的航班，有多少比例會準時抵達？</li>
+</ul>
+<p>至此發現，二元分類、多元分類、異狀偵測以及迴歸等四種演算法關係匪淺，因為它們皆是監督式學習(supervised learning)演算法，而有共通之處。監督式演算法，在建立模型的時候都用了一組包含回答的資料(此過程稱之為訓練，Training)，並被用來分類或預測一組不包含回答的資料(此過程稱之為評分，Scoring)。除此之外，另外一些不同的資料科學的問題，則屬於非監督式和強化式學習(unsupervised and reinforcement learning)類別的處理範疇。</p>
+<hr />
+</div>
+</div>
+<div class="section level2">
+<h2>非監督式學習</h2>
+<p>非監督式學習注重在：「<strong>資料的組成為何？</strong>」</p>
+<p>這類與資料組成相關的問題屬於「非監督式學習」。判斷資料結構的方法有很多。其中一種稱之聚類法(Clustering)，包含資料群集(Chunking)、分組(Grouping)、聚束(Bunching)、分段(Segmentation)等。這些方法目的是將資料分成幾個直觀的群體。不同於監督式學習，聚類法所分析的資料不包含任何用來引導分群、說明分群意義和數量的數字或名字。如果說，監督式學習是用來在星空中找出幾個特定的星球，聚類法則是用來圈出星空中的星座。由於聚類法可以用來將資料分成「幾叢」群體，分析人員可以更輕易地解讀和解釋資料。</p>
+<p>聚類法的基礎為衡量資料之間的距離或是相似程度，也就是距離度量(Distance metric)。距離度量可以是任何可測量的數據，例如智商之間的差距、相同基因組的數量、或是兩點之間的最短距離。和聚類法相關的問題全都試著將資料分成均等的群體。以下用幾種例子說明：</p>
+<ul>
+<li>哪些消費者對於手機有相似的品味？</li>
+<li>哪些觀眾喜歡同一類型的電影？</li>
+<li>哪些型號的印表機有相似的故障？</li>
+</ul>
+<p>非監督式學系下還有另一類的演算法稱之為降低維度法(dimensionality reduction)。降維是另一種簡化資料的方法，它可以讓資料的溝通變得更容易、處裡變得更快、而且存取變得更簡單。</p>
+<p>等第積分平均(GPA)是一個很簡單的例子。對於每位大學生，學術能力評估都是由四年內眾多的課程和考試所組成，但如果它們全部表列出來，沒有任何一位面試官可以吸收如此龐大的資訊。透過計算平均，可以將這些課堂和考試簡化成GPA。因為在某門課表現優異的學生，通常在其他課程的表現也不錯，所以這套方法還算能用。只是GPA的使用並非能夠完整呈現成績，的確會喪失一些資料，例如看不出一位學生的數學程度和英文程度之間的關係，或是相較考試之下是否這位學生更善於回家做作業；不過這樣的系統化作法，最大的好處就是能夠簡化，讓表達和比較學術能力的方式更加簡便。如果當問題的目標是總結、簡化、壓縮或是精粹資料，則聚類法則是理想的作法。</p>
+<hr />
+</div>
+<div class="section level2">
+<h2>強化式學習</h2>
+<p>強化式學習注重在：「<strong>接下來該做什麼？</strong>」</p>
+<p>這類的演算法和行動有關，和監督式與非監督式不一樣。舉例而言，迴歸演算法雖然可以用來預測明天的最高溫度為攝氏三十度，但它卻不能用來判斷該做什麼；強化演算法則可以用來判斷該採取的行動，例如趁天氣還沒過熱之前，先啟動辦公大樓之冷氣。強化演算法源自於大腦對於懲罰或獎勵的反應機制。這些演算法會傾力選出獎勵最高的選項，所以使用者必須提供一組行動選項，並告訴演算法哪些選項好、一般、或很差的行動。</p>
+<p>一般而言，強化演算法很適合用於需要在無人監督的情況之下，完成許多簡單決策自動化的系統。例如電梯、電熱器、冷氣或照明系統。由於強化學習最初被開發的目的是要操縱機器人，任何自動物件也能使用這套演算法。像是偵查用無人機或掃地機器人。以下用幾種例子說明：</p>
+<ul>
+<li>應該要將現在冷氣的溫度調高或調低，還是維持現狀？</li>
+<li>該再掃一次客廳還是繼續充電？</li>
+<li>該買入多少股票？</li>
+</ul>
+<p>比起其他演算法，強化學習演算法通常需要更多時間，因為它和整個系統的整合更密切。這樣的好處是大多數的強化學習可以在沒有資料的情況開始分析，這些演算法會蒐集系統所產生的資料，並從錯誤中不斷學習。</p>
+<hr />
+</div>
+<div class="section level2">
+<h2>參考資料</h2>
+<p><a href="https://brohrer.github.io/five_questions_data_science_answers.html">Five Questions Data Science Answers, Brandon Rohrer’s Blog</a></p>
+</div>
+
+
+</article>
+
+		</main>
+		
+		
+		
+				<div class="hide-print sans-serif f6 f5-l mt5 ph3 pb6 center nested-copy-line-height lh-copy nested-links mw-100 measure-wide">
+		<div class="about-the-author">
+		
+			
+			
+				
+					<p><img src="/img/台股投資選股研究室形象圖案.jpg" alt="台股投資選股研究室形象圖案" /></p>
+
+<p><strong>台股投資選股研究室</strong></p>
+
+<p>一個提供台股最新市場訊息及量化策略投資建議的交流平台，透過量化投資指標的分析與討論，讓更多對台股有興趣的人可以理解量化策略的奧妙。</p>
+
+<!---
+[![Baron Schwartz](/img/baron-square.jpg)](https://www.xaprb.com)
+
+Baron Schwartz is the founder and CTO of [VividCortex](https://vividcortex.com), author of
+several books, and creator of various open-source software. He writes about topics
+such as technology, entrepreneurship, and fitness. [More about
+Baron](https://www.xaprb.com/).
+---->
+
+				
+			
+		
+		</div>
+		
+	</div>
+
+		
+		
+		
+		
+		  <div class="hide-print center bg-white br-3 pv1 ph4 lh-copy f5 nested-links mw7">
+		    
+          <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "nsysuquant" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        
+		  </div>
+		
+		
+		
+		
+		<footer class="hide-print sans-serif f6 fw1 bg-black near-white bottom-0 w-100 pa3" role="contentinfo">
+			
+			<p class="w-50 near-white">
+				&copy; 2019 Quant168 智能投資研究團隊
+			</p>
+		</footer>
+		
+	
+	
+	</body>
+</html>

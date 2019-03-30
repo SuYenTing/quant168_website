@@ -2,7 +2,10 @@
 
 {{ define "main" }}
 <article class="center bg-white br-3 pv1 ph4 lh-copy f5 nested-links mw7">
+	
+	<!-- 文章內容 -->
 	{{ .Content }}
+
 </article>
 {{ end }}
 
@@ -16,3 +19,4 @@
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:site" content="@{{ .Site.Params.twitter }}" />
 {{ end }}
+

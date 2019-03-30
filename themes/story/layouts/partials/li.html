@@ -15,6 +15,7 @@
 					{{- if eq .Section "talks" }}{{ .Params.event }}: {{ end -}}
 					{{- cond (eq .Site.Params.titlecase true) (.Title | title | markdownify) (.Title | markdownify) -}}
 					</a></h1>
+					<p>文章日期: {{dateFormat "2006-01-01" .Date}}</p>
 					<div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
 						{{ if eq .Section "slides" }}
 							{{ .Description | markdownify }}
@@ -32,3 +33,4 @@
 		</div>
 	</article>
 </div>
+
