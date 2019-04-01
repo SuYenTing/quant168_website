@@ -6,7 +6,7 @@ image: "img/unsplash-photos-4zxSWESyZio.jpg"
 credit: "https://unsplash.com/photos/4zxSWESyZio"
 thumbnail: "img/unsplash-photos-4zxSWESyZio.tn-500x500.jpg"
 classes:
-author: "YenTing"
+author: Yen-Ting
 categories:
 - 量化程式小家教
 description: "在做量化投資策略參數最佳化時，都會透過for迴圈的寫法來處理，但是如果策略很複雜時，每次迴圈跑得速度都會很慢。由於R程式是用單個執行緒在跑，因此要克服執行時間很久的問題，最簡單的方法就是在電腦上開很多個R程式一起跑。這樣就會用很多個執行緒在計算，此方法類似平行運算的概念，但這樣做實在是很麻煩。為解決這個問題，R程式裡面有一個套件parallel，只要將要程式碼包裝成函數形式，就可以跑平行運算。"

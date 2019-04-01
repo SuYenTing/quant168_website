@@ -1,7 +1,7 @@
 ---
 title: 機器學習與統計模型之差異
-date: "2019-02-25"
-url: "/post_learn/20190218_differences_between_machine_learning_and_statistical_models"
+date: "2019-02-18"
+url: "/post_knowledge/20190218_differences_between_machine_learning_and_statistical_models"
 image: "img/unsplash-photos-TzMi5Ov7QeM.jpg"
 credit: "https://unsplash.com/photos/TzMi5Ov7QeM"
 thumbnail: "img/unsplash-photos-TzMi5Ov7QeM.tn-500x500.jpg"

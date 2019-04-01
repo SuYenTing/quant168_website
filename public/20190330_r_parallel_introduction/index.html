@@ -10,7 +10,7 @@
 		
 		<title>台股投資選股研究室 部落格</title>
 		<link rel="alternate" type="application/rss+xml" title="RSS" href="/index.xml">
-		<link rel="canonical" href="/post_learn/20190330_r_parallel_introduction/">
+		<link rel="canonical" href="/20190330_r_parallel_introduction/">
 		
 		
 		<link rel="shortcut icon" type="image/png" href="/img/web_logo.jpg">
@@ -23,7 +23,7 @@
 		<meta property="og:type" content="article" />
 		<meta property="og:image" content="/img/unsplash-photos-4zxSWESyZio.jpg" />
 		<meta property="og:description" content="在做量化投資策略參數最佳化時，都會透過for迴圈的寫法來處理，但是如果策略很複雜時，每次迴圈跑得速度都會很慢。由於R程式是用單個執行緒在跑，因此要克服執行時間很久的問題，最簡單的方法就是在電腦上開很多個R程式一起跑。這樣就會用很多個執行緒在計算，此方法類似平行運算的概念，但這樣做實在是很麻煩。為解決這個問題，R程式裡面有一個套件parallel，只要將要程式碼包裝成函數形式，就可以跑平行運算。" />
-		<meta property="og:url" content="/post_learn/20190330_r_parallel_introduction/" />
+		<meta property="og:url" content="/20190330_r_parallel_introduction/" />
 		<meta property="og:site_name" content="R語言平行運算介紹" />
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:site" content="@Quant168 智能投資研究團隊" />
@@ -77,9 +77,9 @@
 							
 								Published
 								<time datetime="2019-03-30T00:00:00Z">Mar 30, 2019</time>
-								<span class="display-print">by Yen-Ting</span>
+								<span class="display-print">by YenTing</span>
 								 in <a href="/categories/%E9%87%8F%E5%8C%96%E7%A8%8B%E5%BC%8F%E5%B0%8F%E5%AE%B6%E6%95%99" class="no-underline category near-white dim">量化程式小家教</a>
-								<span class="display-print">at /post_learn/20190330_r_parallel_introduction/</span>
+								<span class="display-print">at /20190330_r_parallel_introduction/</span>
 							
 						
 					</h2>
@@ -146,10 +146,10 @@ forTime &lt;- proc.time() - ptm  # 結束計時器 </code></pre>
 ##  9     9    81
 ## 10    10   100
 ## # ... with 990 more rows</code></pre>
-<p>在<code>for</code>迴圈的寫法，執行速度為0.85秒：</p>
+<p>在<code>for</code>迴圈的寫法，執行速度為0.84秒：</p>
 <pre class="r"><code>forTime</code></pre>
 <pre><code>##    user  system elapsed 
-##    0.84    0.00    0.85</code></pre>
+##    0.84    0.00    0.84</code></pre>
 </div>
 <div id="apply" class="section level2">
 <h2>Apply寫法</h2>
@@ -169,8 +169,8 @@ output &lt;- do.call(bind_rows, output)       # 整併資料
 lapplyTime &lt;- proc.time() - ptm  # 結束計時器 </code></pre>
 <pre class="r"><code>lapplyTime</code></pre>
 <pre><code>##    user  system elapsed 
-##    0.69    0.00    0.69</code></pre>
-<p>在lapply的寫法，執行的速度為0.69秒，相較於For迴圈寫法，提升0.16秒。</p>
+##    0.69    0.00    0.68</code></pre>
+<p>在lapply的寫法，執行的速度為0.68秒，相較於For迴圈寫法，提升0.16秒。</p>
 </div>
 <div class="section level2">
 <h2>平行運算寫法</h2>
@@ -198,7 +198,7 @@ parLapplyTime &lt;- proc.time() - ptm  # 結束計時器 </code></pre>
 <pre class="r"><code>parLapplyTime</code></pre>
 <pre><code>##    user  system elapsed 
 ##    0.01    0.00    0.22</code></pre>
-<p>在平行運算的的寫法，執行的速度為0.22秒，比<code>for</code>迴圈寫法快0.63秒，比<code>lapply</code>的寫法快0.47秒。這僅僅是處理1,000筆資料的數據，當資料量大時，速度差異將會更大。</p>
+<p>在平行運算的的寫法，執行的速度為0.22秒，比<code>for</code>迴圈寫法快0.62秒，比<code>lapply</code>的寫法快0.46秒。這僅僅是處理1,000筆資料的數據，當資料量大時，速度差異將會更大。</p>
 <p>在運作完平行運算後，要記得將平行運算關掉，不要浪費電腦效能</p>
 <pre class="r"><code>stopCluster(cl)</code></pre>
 <p>以下為完整的平行運算範例程式碼：</p>
@@ -252,11 +252,20 @@ stopCluster(cl) # 結束平行運算</code></pre>
 			
 			
 				
-					<p><img src="/img/YenTing.jpg" alt="YenTing" /></p>
+					<p><img src="/img/台股投資選股研究室形象圖案.jpg" alt="台股投資選股研究室形象圖案" /></p>
 
-<p><strong>YenTing</strong></p>
+<p><strong>台股投資選股研究室</strong></p>
 
-<p>大學念經濟，碩士班念財務管理，目前在做量化投資策略開發工作。喜歡用程式來解決問題，認為麻煩的事情交給電腦來做就好。</p>
+<p>一個提供台股最新市場訊息及量化策略投資建議的交流平台，透過量化投資指標的分析與討論，讓更多對台股有興趣的人可以理解量化策略的奧妙。</p>
+
+<!---
+[![Baron Schwartz](/img/baron-square.jpg)](https://www.xaprb.com)
+
+Baron Schwartz is the founder and CTO of [VividCortex](https://vividcortex.com), author of
+several books, and creator of various open-source software. He writes about topics
+such as technology, entrepreneurship, and fitness. [More about
+Baron](https://www.xaprb.com/).
+---->
 
 				
 			

@@ -5,17 +5,17 @@
     <link>/post_knowledge/</link>
     <description>Recent content in 股市小學堂 on 台股投資選股研究室 部落格</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 25 Feb 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 18 Feb 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post_knowledge/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>機器學習與統計模型之差異</title>
-      <link>/post_learn/20190218_differences_between_machine_learning_and_statistical_models/</link>
-      <pubDate>Mon, 25 Feb 2019 00:00:00 +0000</pubDate>
+      <link>/post_knowledge/20190218_differences_between_machine_learning_and_statistical_models/</link>
+      <pubDate>Mon, 18 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post_learn/20190218_differences_between_machine_learning_and_statistical_models/</guid>
+      <guid>/post_knowledge/20190218_differences_between_machine_learning_and_statistical_models/</guid>
       <description>統計模型定義統計模型係為「以數據為基礎，使用數學方程式的形式表現變量之間的關係。」
 機器學習與統計模型之相異之處在接觸到機器學習的領域時，許多人一定有個疑問：機器學習是不是就等同於統計模型？在回答這個問題之前，我們應該都能理解一點，當處理的問題是與數據息息相關，無論使用何種工具來分析，最後的目標都是從數據當中挖掘潛在的知識與訊息。故對於機器學習與統計模型來說，都是藉由資料分析，獲得背後隱藏的訊息。回歸到機器學習與統計模型的差異，先從其定義說起：
 機器學習是「以一種不仰賴規則而設計的數據學習之演算法。」
@@ -45,10 +45,10 @@
     
     <item>
       <title>機器學習簡介─機器學習能夠解決哪些問題？</title>
-      <link>/post_learn/20190211_what_problems_can_machine_learning_solve/</link>
-      <pubDate>Mon, 18 Feb 2019 00:00:00 +0000</pubDate>
+      <link>/post_knowledge/20190211_what_problems_can_machine_learning_solve/</link>
+      <pubDate>Mon, 11 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post_learn/20190211_what_problems_can_machine_learning_solve/</guid>
+      <guid>/post_knowledge/20190211_what_problems_can_machine_learning_solve/</guid>
       <description>機器學習定義機器學習係為「能讓機器能夠自主學習並增強的演算法。其屬於人工智慧發展的一環。」
 機器學習之學習方式在機器學習中，演算法通常隱含著電腦運作的邏輯與思路，故通常負責了資訊科學中最難解釋的部分。然而，機器學習能夠解決多少問題，則取決於演算法的發展，以下將介紹其發展領域，包含「監督式學習」、「非監督式學習」、以及「強化式學習」三個部分。
 監督式學習監督式學習主要能處理的問題有：分類問題、偵測異狀、以及提供迴歸演算法。
@@ -70,10 +70,10 @@
     
     <item>
       <title>量化投資簡介</title>
-      <link>/post_learn/20190204_quantitative_investment_profile/</link>
+      <link>/post_knowledge/20190204_quantitative_investment_profile/</link>
       <pubDate>Mon, 04 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post_learn/20190204_quantitative_investment_profile/</guid>
+      <guid>/post_knowledge/20190204_quantitative_investment_profile/</guid>
       <description>量化投資是指「以量化的手段，藉由電腦程序化給予買賣交易訊號的一種投資方式。其目的在於獲取穩定的報酬率。」
 量化投資的概念與發展股票的發行，起源於十七世紀的荷蘭東印度公司，但量化投資的方式，卻是在1980年代才崛起，這一切得歸功於電腦科技的發展。量化投資是藉由數學模型的判斷下，給予交易有價證券的訊號。然而，這些數學模型並非無中生有，而是學者們觀察到市場與經濟的規律及模式，並以歷史的數據做為驗證，最終將其編譯成電腦的交易策略。而通常這種投資方式，皆為演算法的判斷，較無人為的介入以影響投資決策。
 因此，量化投資出現的主因，除了電腦技術的發展與普及，還包含了現代金融理論的發展、以及交易成本的降低。以下將說明這三項推動量化投資發展的因素：
@@ -87,10 +87,10 @@
     
     <item>
       <title>如何做回溯測試?</title>
-      <link>/post_learn/20190123_how_to_backtesting/</link>
+      <link>/post_knowledge/20190123_how_to_backtesting/</link>
       <pubDate>Wed, 23 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post_learn/20190123_how_to_backtesting/</guid>
+      <guid>/post_knowledge/20190123_how_to_backtesting/</guid>
       <description>多數人面對一個陌生的投資標的時，參考或仿效過往的成功做法，往往會是一個較有安全感，且似乎風險較低的選擇。
 回溯測試定義回溯測試的概念，就是鑑往知來，藉由模擬過去某時期的投資策略，去操作現在的 投資，而從過去所累積至今的績效報酬，就成為此投資策略的戰績，並作為未來投資的參考依據，它也是投資常見的方法——「＃量化投資」的核心。
 下圖為例，小明現在想測試一個投資策略，它的策略做法為月營收發布日隔天(起始日:2001/01/11)挑選月營收排名前五名之股票，將投資組合持有一個月，並於下一次月營收發布日隔天(i.e. 2001/02/11)重新使用月營收挑選股票，重複上述流程操作至今，並將各期間報酬進行統計分析，便可知道其回測績效為何。

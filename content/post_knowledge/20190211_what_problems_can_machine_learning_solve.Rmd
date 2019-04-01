@@ -1,7 +1,7 @@
 ---
 title: 機器學習簡介─機器學習能夠解決哪些問題？
-date: "2019-02-18"
-url: "/post_learn/20190211_what_problems_can_machine_learning_solve"
+date: "2019-02-11"
+url: "/post_knowledge/20190211_what_problems_can_machine_learning_solve"
 image: "img/unsplash-photos-nehfi_SfqtU.jpg"
 credit: "https://unsplash.com/photos/nehfi_SfqtU"
 thumbnail: "img/unsplash-photos-nehfi_SfqtU.tn-500x500.jpg"

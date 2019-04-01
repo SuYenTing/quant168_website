@@ -60,10 +60,10 @@ forTime &amp;lt;- proc.time() - ptm  # 結束計時器 &lt;/code&gt;&lt;/pre&gt;
 ##  9     9    81
 ## 10    10   100
 ## # ... with 990 more rows&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;在&lt;code&gt;for&lt;/code&gt;迴圈的寫法，執行速度為0.89秒：&lt;/p&gt;
+&lt;p&gt;在&lt;code&gt;for&lt;/code&gt;迴圈的寫法，執行速度為0.85秒：&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;forTime&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##    user  system elapsed 
-##    0.89    0.00    0.89&lt;/code&gt;&lt;/pre&gt;
+##    0.84    0.00    0.85&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;apply&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Apply寫法&lt;/h2&gt;
@@ -83,8 +83,8 @@ output &amp;lt;- do.call(bind_rows, output)       # 整併資料
 lapplyTime &amp;lt;- proc.time() - ptm  # 結束計時器 &lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;lapplyTime&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##    user  system elapsed 
-##    0.68    0.00    0.69&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;在lapply的寫法，執行的速度為0.69秒，相較於For迴圈寫法，提升0.2秒。&lt;/p&gt;
+##    0.69    0.00    0.69&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;在lapply的寫法，執行的速度為0.69秒，相較於For迴圈寫法，提升0.16秒。&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;section level2&#34;&gt;
 &lt;h2&gt;平行運算寫法&lt;/h2&gt;
@@ -111,8 +111,8 @@ output &amp;lt;- do.call(bind_rows, output)               # 整併資料
 parLapplyTime &amp;lt;- proc.time() - ptm  # 結束計時器 &lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;parLapplyTime&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##    user  system elapsed 
-##    0.02    0.00    0.21&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;在平行運算的的寫法，執行的速度為0.21秒，比&lt;code&gt;for&lt;/code&gt;迴圈寫法快0.68秒，比&lt;code&gt;lapply&lt;/code&gt;的寫法快0.48秒。這僅僅是處理1,000筆資料的數據，當資料量大時，速度差異將會更大。&lt;/p&gt;
+##    0.01    0.00    0.22&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;在平行運算的的寫法，執行的速度為0.22秒，比&lt;code&gt;for&lt;/code&gt;迴圈寫法快0.63秒，比&lt;code&gt;lapply&lt;/code&gt;的寫法快0.47秒。這僅僅是處理1,000筆資料的數據，當資料量大時，速度差異將會更大。&lt;/p&gt;
 &lt;p&gt;在運作完平行運算後，要記得將平行運算關掉，不要浪費電腦效能&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;stopCluster(cl)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;以下為完整的平行運算範例程式碼：&lt;/p&gt;
@@ -640,10 +640,10 @@ stopCluster(cl) # 結束平行運算&lt;/code&gt;&lt;/pre&gt;
 		
 		<item>
 			<title>機器學習與統計模型之差異</title>
-			<link>/post_learn/20190218_differences_between_machine_learning_and_statistical_models/</link>
-			<pubDate>Mon, 25 Feb 2019 00:00:00 UTC</pubDate>
+			<link>/post_knowledge/20190218_differences_between_machine_learning_and_statistical_models/</link>
+			<pubDate>Mon, 18 Feb 2019 00:00:00 UTC</pubDate>
 			<author>Quant168 智能投資研究團隊</author>
-			<guid>/post_learn/20190218_differences_between_machine_learning_and_statistical_models/</guid>
+			<guid>/post_knowledge/20190218_differences_between_machine_learning_and_statistical_models/</guid>
 			<media:content xmlns:media="http://search.yahoo.com/mrss/" url="/img/unsplash-photos-TzMi5Ov7QeM.tn-500x500.jpg" medium="image" type="image/jpg" width="100" height="100" />
 			<description>
 
@@ -702,10 +702,10 @@ stopCluster(cl) # 結束平行運算&lt;/code&gt;&lt;/pre&gt;
 		
 		<item>
 			<title>機器學習簡介─機器學習能夠解決哪些問題？</title>
-			<link>/post_learn/20190211_what_problems_can_machine_learning_solve/</link>
-			<pubDate>Mon, 18 Feb 2019 00:00:00 UTC</pubDate>
+			<link>/post_knowledge/20190211_what_problems_can_machine_learning_solve/</link>
+			<pubDate>Mon, 11 Feb 2019 00:00:00 UTC</pubDate>
 			<author>Quant168 智能投資研究團隊</author>
-			<guid>/post_learn/20190211_what_problems_can_machine_learning_solve/</guid>
+			<guid>/post_knowledge/20190211_what_problems_can_machine_learning_solve/</guid>
 			<media:content xmlns:media="http://search.yahoo.com/mrss/" url="/img/unsplash-photos-nehfi_SfqtU.tn-500x500.jpg" medium="image" type="image/jpg" width="100" height="100" />
 			<description>
 
@@ -805,10 +805,10 @@ stopCluster(cl) # 結束平行運算&lt;/code&gt;&lt;/pre&gt;
 		
 		<item>
 			<title>量化投資簡介</title>
-			<link>/post_learn/20190204_quantitative_investment_profile/</link>
+			<link>/post_knowledge/20190204_quantitative_investment_profile/</link>
 			<pubDate>Mon, 04 Feb 2019 00:00:00 UTC</pubDate>
 			<author>Quant168 智能投資研究團隊</author>
-			<guid>/post_learn/20190204_quantitative_investment_profile/</guid>
+			<guid>/post_knowledge/20190204_quantitative_investment_profile/</guid>
 			<media:content xmlns:media="http://search.yahoo.com/mrss/" url="/img/unsplash-photos-vHnVtLK8rCc.tn-500x500.jpg" medium="image" type="image/jpg" width="100" height="100" />
 			<description>
 
@@ -846,10 +846,10 @@ stopCluster(cl) # 結束平行運算&lt;/code&gt;&lt;/pre&gt;
 		
 		<item>
 			<title>如何做回溯測試?</title>
-			<link>/post_learn/20190123_how_to_backtesting/</link>
+			<link>/post_knowledge/20190123_how_to_backtesting/</link>
 			<pubDate>Wed, 23 Jan 2019 00:00:00 UTC</pubDate>
 			<author>Quant168 智能投資研究團隊</author>
-			<guid>/post_learn/20190123_how_to_backtesting/</guid>
+			<guid>/post_knowledge/20190123_how_to_backtesting/</guid>
 			<media:content xmlns:media="http://search.yahoo.com/mrss/" url="/img/unsplash-photos-QRkew0KwXSM.tn-500x500.jpg" medium="image" type="image/jpg" width="100" height="100" />
 			<description>
 

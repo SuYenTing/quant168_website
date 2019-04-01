@@ -1,7 +1,7 @@
 ---
 title: 如何做回溯測試?
 date: "2019-01-23"
-url: "/post_learn/20190123_how_to_backtesting"
+url: "/post_knowledge/20190123_how_to_backtesting"
 credit: "https://unsplash.com/photos/QRkew0KwXSM"
 image: "img/unsplash-photos-QRkew0KwXSM.jpg"
 thumbnail: img/unsplash-photos-QRkew0KwXSM.tn-500x500.jpg
