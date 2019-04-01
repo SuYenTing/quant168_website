@@ -37,6 +37,11 @@ disqusShortname = "https-quant168-netlify-com"
   url = "/post_strategy/"
   
 [[menu.main]]
+  name = "股市小學堂"
+  title = "股市小學堂"
+  url = "/post_knowledge/"
+  
+[[menu.main]]
   name = "量化程式小家教"
   title = "量化程式小家教"
   url = "/post_learn/"
